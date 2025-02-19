@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>Emp 정보</h2>
+	
+	<form>
+	
+	사원번호:<input type="text" name="사원번호"><br>
+	이름:<input type="text" name="이름"><br>
+	성별:
+		<input type="radio" name="성별">남자
+		<input type="radio" name="성별">여자<br>
+	직업:<input type="text" name="직업"><br>
+	상사:
+	<select name="상사">
+		<option>123</option>
+		<option>456</option>
+		<option>789</option>
+	</select> <br>
+	입사일:<input type="date" name="입사일"><br>
+	급여:<input type="text" name="급여"><br>
+	커미션:<input type="text" name="커미션"><br>
+	<select name="부서번호">
+		<option>123</option>
+		<option>456</option>
+		<option>789</option>
+	</select> <br>
+	
+	
+		
+	
+	
+	</form>
+
+</body>
+</html>
