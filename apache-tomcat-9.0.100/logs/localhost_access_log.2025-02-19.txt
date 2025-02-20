@@ -330,3 +330,6 @@
 0:0:0:0:0:0:0:1 - - [19/Feb/2025:16:49:17 +0900] "GET /JSPBasic/request/req_get_ex04.jsp HTTP/1.1" 200 171
 0:0:0:0:0:0:0:1 - - [19/Feb/2025:16:49:23 +0900] "GET /JSPBasic/request/req_get_ex03.jsp HTTP/1.1" 200 397
 0:0:0:0:0:0:0:1 - - [19/Feb/2025:16:49:26 +0900] "GET /JSPBasic/request/req_get_ex04.jsp?name=%ED%99%8D%EA%B8%B8%EB%8F%99&age=20 HTTP/1.1" 200 174
+127.0.0.1 - - [19/Feb/2025:18:05:21 +0900] "GET / HTTP/1.1" 200 11430
+0:0:0:0:0:0:0:1 - - [19/Feb/2025:18:05:22 +0900] "GET /JSPBasic/request/req_get_ex01.jsp HTTP/1.1" 200 762
+0:0:0:0:0:0:0:1 - - [19/Feb/2025:18:05:35 +0900] "GET /JSPBasic/request/req_get_ex02.jsp?date=2025-02-21&msg=asdadas&agree=%EC%BD%94%EB%94%A9&agree=%EA%B3%A0%EB%94%A9 HTTP/1.1" 200 216
