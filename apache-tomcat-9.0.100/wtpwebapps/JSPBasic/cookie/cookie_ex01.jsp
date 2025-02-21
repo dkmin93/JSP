@@ -2,11 +2,11 @@
     pageEncoding="UTF-8"%>
 <% 
 	Cookie[] arr = request.getCookies();
-	String checking = "";
+	String rememberMe = "";
 	if(arr != null) {
 		for(Cookie c : arr) {
-			if(c.getName().equals("아이디기록용")) {
-				checking = c.getValue();
+			if(c.getName().equals("rememberME")) {
+				rememberMe = c.getValue();
 			}
 		}
 	}
@@ -26,10 +26,10 @@
 	<!-- input 태그에 쿠키값을 미리 찍어주기 -->
 
 	<form action="cookie_ex01_result.jsp" method="post">
-		<input type="text" name="id" placeholder="아이디" value="<%=checking%>">
+		<input type="text" name="id" placeholder="아이디" value="<%=rememberMe%>">
 		<input type="text" name="pw" placeholder="password">
 		<input type="submit" value="쿠키로그인">
-		<input type="checkbox" value="yes">아이디 기억하기
+		<input type="checkbox" name="idCheck" value="yes">아이디 기억하기
 	</form>
 
 

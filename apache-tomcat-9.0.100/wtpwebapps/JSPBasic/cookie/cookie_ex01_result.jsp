@@ -3,16 +3,20 @@
 <%
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
+	String idCheck = request.getParameter("idCheck");
 	
 	//i와 pw가 동일하면 로그인 성공
 	if(id.equals(pw)) {
 		//쿠키 생성!
 		Cookie cookie = new Cookie("userId", id);
-		Cookie cookie2 = new Cookie("아이디기록용", id);
 		cookie.setMaxAge(1800);
-		cookie2.setMaxAge(1800);
 		response.addCookie(cookie);
-		response.addCookie(cookie2);
+		
+		if(idCheck != null) {
+			Cookie rememberMe = new Cookie("rememberMe", id);
+			rememberMe.setMaxAge(8760000);
+			response.addCookie(rememberMe);
+		}
 		
 		response.sendRedirect("cookie_ex01_welcome.jsp");
 	} else {

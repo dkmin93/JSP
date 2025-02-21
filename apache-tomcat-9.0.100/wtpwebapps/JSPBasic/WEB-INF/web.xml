@@ -12,7 +12,7 @@
   
   <!-- 서블릿 맵핑 설정 -->
   
-  <servlet>
+  <!-- <servlet>
   	<servlet-name>webapp</servlet-name>
   	<servlet-class>com.servlet.Myservlet</servlet-class>
   </servlet>
@@ -20,8 +20,22 @@
   <servlet-mapping>
   	<servlet-name>webapp</servlet-name>
   	<url-pattern>/melon</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   
-  
+  <!-- 에러페이지에 대한 전역설정 -->
+<!-- <error-page>
+	<error-code>404</error-code>
+	<location>/errorpage/error_view.jsp</location>
+</error-page>
+
+<error-page>
+	<error-code>500</error-code>
+	<location>/errorpage/error_view.jsp</location>
+</error-page>
+
+<error-page>
+	<exception-type>java.lang.NullPointerException</exception-type>
+	<location>/errorpage/error_view.jsp</location>
+</error-page> -->
   
 </web-app>

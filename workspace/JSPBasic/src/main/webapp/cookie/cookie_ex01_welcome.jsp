@@ -4,15 +4,6 @@
 	Cookie[] arr = request.getCookies();
 
 	String userId = null;
-	if(arr != null) {
-		for(Cookie c : arr) {
-			if(c.getName().equals("userId")) {
-				userId = c.getValue();
-			} else if(c.getName().equals("아이디기록용")) {
-				아이디기록용 = c.getValue();
-			}
-		}
-	}
 	
 	
 	
