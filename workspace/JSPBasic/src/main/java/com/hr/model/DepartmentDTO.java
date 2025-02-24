@@ -13,6 +13,11 @@ public class DepartmentDTO {
 	private int managerId;
 	private int locationID;
 	
+	
+	public DepartmentDTO() {
+		
+	}
+
 	//알트+쉬프트+s 로 생성자 게터 세터 생성
 	public DepartmentDTO(int departmentId, String departmentName, int managerId, int locationID) {
 		super();
