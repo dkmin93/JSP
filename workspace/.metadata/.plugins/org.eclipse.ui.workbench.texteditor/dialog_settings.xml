@@ -4,6 +4,13 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="form"/>
+			<item value="href"/>
+			<item value="regist"/>
+			<item value="stamp"/>
+			<item value="time"/>
+			<item value="등록일"/>
+			<item value="문의"/>
 			<item value="sys"/>
 			<item value="등록"/>
 			<item value="이름"/>
@@ -12,7 +19,6 @@
 			<item value="checked"/>
 			<item value="이메일 제공"/>
 			<item value="ID"/>
-			<item value="is"/>
 		</list>
 	</section>
 </section>

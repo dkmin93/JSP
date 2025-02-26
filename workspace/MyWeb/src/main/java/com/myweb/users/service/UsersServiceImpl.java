@@ -1,6 +1,7 @@
 package com.myweb.users.service;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -104,13 +105,59 @@ public class UsersServiceImpl implements UsersService {
 		//성공시에는 메인페이지로 이동, 실패시에는 mypage로 이동
 		
 		if(result == 0) { //실패
-			request.setAttribute("msg", "회원 정보를 확인해주세요");
-			request.getRequestDispatcher("mypage.jsp").forward(request, response);
+			response.sendRedirect("mypage.users");
+			//request.setAttribute("msg", "회원 정보를 확인해주세요");
+			//request.getRequestDispatcher("mypage.jsp").forward(request, response);
 		} else { //성공
 		
-		
+			//세션의 정보도 업데이트 복기
+			//UsersDTO userDTO = new UsersDTO(email, name, null, phone, gender, null);
+			//session.setAttribute("userDTO", userDTO);
 			
-			response.sendRedirect("../index.jsp");
+			//화면에 메세지를 보내는 또다른 방법(out 객체를 사용)
+			response.setContentType("text/html; charset=UTF-8;");
+			PrintWriter out = response.getWriter();
+			out.print("<script>");
+			out.print("alert('정보가 수정되었습니다');");
+			out.print("location.href='/MyWeb/index.jsp';");    //팝업창 기능
+			out.print("</script>");
+			
+			//response.sendRedirect("../index.jsp");
+			
+		}
+		
+	}
+	
+	@Override
+	public void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//1.delete from 테이블명 where 키 = ?
+		//2.email은 세션에 있다.
+		//3.이메일을 세션에서 얻어서 dao에서 삭제를 진행
+		//4.삭제 성공시 세션을 삭제하고 메인페이지 이동 (성공메세지도 띄우기) / 실패시 마이페이지 리다이렉트 이동
+		
+		HttpSession session = request.getSession();
+		UsersDTO dto = (UsersDTO)session.getAttribute("userDTO"); //getAttribute로 가져온 값은 꼭 캐스팅
+		String email = dto.getEmail();
+		
+		UsersDAO dao = UsersDAO.getInstance();
+		int result = dao.delete(email);
+		
+		if(result == 0) { //실패
+			response.sendRedirect("mypage.users");
+			
+		} else { //성공
+			
+			if (session != null) {
+			    session.invalidate();
+			}
+			
+			response.setContentType("text/html; charset=UTF-8;");
+			PrintWriter out = response.getWriter();
+			
+			out.print("<script>");
+			out.print("alert('정상적으로 탈퇴되었습니다');");
+			out.print("location.href='/MyWeb/index.jsp';"); 
+			out.print("</script>");
 			
 		}
 		
