@@ -104,7 +104,7 @@
                             <label for="email_lbl" class="tit_lbl pilsoo_item">작성자</label>
                             <div class="app_content email_area">
 								<input type="hidden" />
-                                <input type="text" placeholder="작성자" name="email" required/>
+                                <input type="text" placeholder="작성자" name="email" VALUE="${sessionScope.userDTO.email}" required readonly/>
 
                             </div>
 						</li>

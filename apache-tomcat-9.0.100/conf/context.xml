@@ -26,7 +26,6 @@
     <!--
     <Manager pathname="" />
     -->
-    
     <Resource
 	 auth="Container"
 	 driverClassName = "oracle.jdbc.driver.OracleDriver"

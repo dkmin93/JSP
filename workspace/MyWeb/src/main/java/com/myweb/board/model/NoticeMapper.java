@@ -1,6 +1,7 @@
 package com.myweb.board.model;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public interface NoticeMapper {
 	//인터페이스 명은 xml이랑 이름을 맞추는게 좋다.
@@ -15,7 +16,9 @@ public interface NoticeMapper {
 	
 	BoardDTO getContent(String bno);
 	
+	int update(Map<String, String> map);
 	
+	void delete(String bno);
 	
 	
 	

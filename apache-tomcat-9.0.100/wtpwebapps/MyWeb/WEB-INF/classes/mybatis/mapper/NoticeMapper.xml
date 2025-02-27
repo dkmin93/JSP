@@ -9,7 +9,7 @@
 	<!-- SQL구문에서 세미콜론은 생략한다 -->
 	<!-- select는 resultType에 반환받을 타입을 반드시!!!!! 적어야한다 -->
 	<!-- 타입의 종류로는 string, int, double, array, dto 등이 있다 -->
-	<select id="getTime" resultType="String">
+	<select id="getTime" resultType="string">
 		SELECT SYSDATE FROM DUAL
 	</select>
 	
@@ -26,7 +26,24 @@
 </select>
 
 <select id="getContent" resultType="com.myweb.board.model.BoardDTO">
-    SELECT * FROM BOARD WHERE BNO = #{BNO}
+    SELECT *
+FROM (
+    SELECT B.*,
+       LAG(BNO, 1, 0) OVER(ORDER BY BNO) AS PREV_NO,
+       LAG(TITLE, 1, '이전 글이 없습니다') OVER(ORDER BY BNO) AS PREV_TITLE,
+       LEAD(BNO, 1, 0) OVER(ORDER BY BNO) AS NEXT_NO,
+       LEAD(TITLE, 1, '다음 글이 없습니다') OVER(ORDER BY BNO) AS NEXT_TITLE
+FROM BOARD B
+)
+WHERE BNO = #{BNO}
+</select>
+
+<select id="update" parameterType="map">
+	UPDATE BOARD SET TITLE = #{title}, CONTENT = #{content} WHERE BNO = #{bno}
+</select>
+
+<select id="delete" parameterType="string">
+	DELETE FROM BOARD WHERE BNO = #{bno}
 </select>
 
 </mapper>

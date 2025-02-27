@@ -10,6 +10,11 @@ public class BoardDTO {
 	private String regdate;
 	private String email;
 	
+	private String prevNo; //데이터베이스의 스네이크표기법을 카멜로 자동 변경함
+	private String prevTitle; 
+	private String nextNo;
+	private String nextTitle; 
+	
 	public BoardDTO() {
 		
 	}
@@ -21,6 +26,7 @@ public class BoardDTO {
 		this.title = title;
 		this.content = content;
 		this.regdate = regdate;
+		
 	}
 
 	public int getBno() {
@@ -61,6 +67,38 @@ public class BoardDTO {
 
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
+	}
+
+	public String getPrevNo() {
+		return prevNo;
+	}
+
+	public void setPrevNo(String prevNo) {
+		this.prevNo = prevNo;
+	}
+
+	public String getPrevTitle() {
+		return prevTitle;
+	}
+
+	public void setPrevTitle(String prevTitle) {
+		this.prevTitle = prevTitle;
+	}
+
+	public String getNextNo() {
+		return nextNo;
+	}
+
+	public void setNextNo(String nextNo) {
+		this.nextNo = nextNo;
+	}
+
+	public String getNextTitle() {
+		return nextTitle;
+	}
+
+	public void setNextTitle(String nextTitle) {
+		this.nextTitle = nextTitle;
 	}
 	
 	
