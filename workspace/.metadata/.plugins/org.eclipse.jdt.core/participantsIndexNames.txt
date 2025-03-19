@@ -29,6 +29,8 @@ C:\Users\user\Desktop\course\JSP\workspace\.metadata\.plugins\org.eclipse.jst.js
 \MyWeb\src\main\java
 C:\Users\user\Desktop\course\JSP\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1924956126.index
 \JSPBasic\src\main\java
+C:\Users\user\Desktop\course\JSP\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\847783037.index
+\JSPBasic\src\main\java
 C:\Users\user\Desktop\course\JSP\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4235857174.index
 \JSPBasic\src\main\java
 C:\Users\user\Desktop\course\JSP\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3865960498.index

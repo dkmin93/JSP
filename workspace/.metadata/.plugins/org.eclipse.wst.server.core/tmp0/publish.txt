@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Thu Feb 27 15:42:02 KST 2025
-org.eclipse.jst.jee.server\:MyWeb=C\:\\Users\\user\\Desktop\\course\\JSP\\apache-tomcat-9.0.100\\wtpwebapps\\MyWeb
